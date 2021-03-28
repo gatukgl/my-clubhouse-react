@@ -2,13 +2,18 @@
 
 1. Slide: https://docs.google.com/presentation/d/1Ajb9n-ttpUwEhaZXPCgsGOFZZl7FWNi9JQ5jsPrumFg/edit#slide=id.p
 
-2. ES6++ usage examples: 
+2. ES6++ usage examples: https://gist.github.com/gatukgl/b07367c40c9df69e8389d405f3a39550
 
-3. Clubhouse HTML: https://github.com/gatukgl/hello-clubhouse-html
+3. Setting up React app: https://github.com/gatukgl/my-clubhouse-react/blob/master/docs/setting-up-react-app.md 
 
-4. .prettierrc.json
+4. Clubhouse HTML: https://github.com/gatukgl/hello-clubhouse-html
+
+5. Converting HTML to JSX guideline: https://github.com/gatukgl/my-clubhouse-react/blob/master/docs/react-components.md
+
+6. Prettier configurations
 
    ```json
+   // .prettierrc.json
    {
      "trailingComma": "es5",
      "tabWidth": 2,
@@ -18,7 +23,7 @@
    }
    ```
 
-5. Rooms for state before fetching from API
+7. Rooms for state before fetching from API
 
    ```js
    const rooms = [
@@ -60,5 +65,5 @@
      ]
    ```
 
-6. My clubhouse completed version - https://github.com/gatukgl/my-clubhouse-react
+8. My clubhouse completed version - https://github.com/gatukgl/my-clubhouse-react
 
