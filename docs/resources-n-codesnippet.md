@@ -4,7 +4,21 @@
 
 2. React installation guide:  
 
-3. Rooms
+3. .prettierrc.json
+
+   ```json
+   {
+     "trailingComma": "es5",
+     "tabWidth": 2,
+     "semi": false,
+     "singleQuote": true,
+     "arrowParens": "avoid"
+   }
+   ```
+
+4. Dd
+
+5. Rooms for state before fetching from API
 
    ```js
    const rooms = [
@@ -46,7 +60,7 @@
      ]
    ```
 
-4. My clubhouse completed version - 
+6. My clubhouse completed version - 
 
-5. 
+7. 
 
