@@ -1,48 +1,53 @@
+import axios from 'axios'
+import React from 'react'
 import { Room } from './Room'
 
-export const Rooms = () => {
-  const rooms = [
-    {
-      id: 1,
-      topic: 'สภาชานม: เรียนรู้ไม่มีสิ้นสุด เรียนยังไง เรียนกับใคร',
-      moderators: [
-        {
-          username: 'emmaw',
-          name: 'Emma Watson',
-          imageUrl: 'https://www.w3schools.com/howto/img_avatar2.png',
-        },
-        {
-          username: 'rugrint',
-          name: 'Rupert Grint',
-          imageUrl: 'https://www.w3schools.com/howto/img_avatar.png',
-        },
-      ],
-      listenerCount: 20,
-    },
+export class Rooms extends React.Component {
+  state = { rooms: [] }
 
-    {
-      id: 2,
-      topic: 'Animal On A Budget: 6 Tips From The Great Depression',
-      moderators: [
-        {
-          username: 'robber55',
-          name: 'Robert Kraken',
-          imageUrl: 'https://www.w3schools.com/w3images/avatar2.png',
-        },
-        {
-          username: 'sixtysixty',
-          name: 'Twinkle Littlestar',
-          imageUrl: 'https://www.w3schools.com/w3images/avatar5.png',
-        },
-      ],
-      listenerCount: 7,
-    },
-  ]
-  return (
-    <>
-      {rooms.map((roomDetail) => {
-        return <Room key={roomDetail.id} detail={roomDetail} />
-      })}
-    </>
-  )
+  mapRoomsFromApi(data) {
+    const rooms = data.map((item) => {
+      return {
+        id: item.id,
+        topic: item.topic,
+        listenerCount: item.room_listener.length,
+        moderators: [
+          {
+            username: item.room_moderator[0].user.username,
+            name: item.room_moderator[0].user.name,
+            imageUrl: item.room_moderator[0].user.profile_picture,
+          },
+          {
+            username: item.room_moderator[1].user.username,
+            name: item.room_moderator[1].user.name,
+            imageUrl: item.room_moderator[1].user.profile_picture,
+          },
+        ],
+      }
+    })
+
+    return rooms
+  }
+
+  componentDidMount() {
+    const url = 'http://192.168.1.108:8000/api/rooms/'
+    axios
+      .get(url)
+      .then((response) => {
+        const data = response.data
+        const rooms = this.mapRoomsFromApi(data)
+        this.setState({ rooms: rooms })
+      })
+      .catch((error) => console.error('[Get rooms]', error))
+  }
+
+  render() {
+    return (
+      <>
+        {this.state.rooms.map((roomDetail) => {
+          return <Room key={roomDetail.id} detail={roomDetail} />
+        })}
+      </>
+    )
+  }
 }

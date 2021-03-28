@@ -7,7 +7,7 @@ export const RoomCreationButton = withRouter((props) => {
   }
 
   return (
-    <div class="my-4">
+    <div className="my-4">
       <button className="btn btn-primary" onClick={onButtonClicked}>
         Helloworld
       </button>
