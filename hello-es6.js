@@ -41,3 +41,40 @@ const user = {
 }
 const { firstname, lastname } = user
 console.log('user > ', firstname, lastname)
+
+// callback
+function callApi(callback) {
+  setTimeout(() => {
+    callback('successfully after 1 sec')
+  }, 1000)
+}
+
+callApi((text) => {
+  console.log('callback text', text)
+})
+
+// promise
+const callApiPromise = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('successfully after 300 ms')
+    }, 300)
+  })
+}
+callApiPromise().then((text) => {
+  console.log('promise text', text)
+})
+
+// async/await
+const callApiAsync = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('async/await successfully after 500 ms')
+    }, 300)
+  })
+}
+const fetchData = async () => {
+  const text = await callApiAsync()
+  console.log(text)
+}
+fetchData()
