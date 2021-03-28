@@ -58,7 +58,5 @@
      ]
    ```
 
-5. My clubhouse completed version - 
-
-6. 
+5. My clubhouse completed version - https://github.com/gatukgl/my-clubhouse-react
 
