@@ -2,9 +2,11 @@
 
 1. Slide: https://docs.google.com/presentation/d/1Ajb9n-ttpUwEhaZXPCgsGOFZZl7FWNi9JQ5jsPrumFg/edit#slide=id.p
 
-2. Clubhouse HTML: https://github.com/gatukgl/hello-clubhouse-html
+2. ES6++ usage examples: 
 
-3. .prettierrc.json
+3. Clubhouse HTML: https://github.com/gatukgl/hello-clubhouse-html
+
+4. .prettierrc.json
 
    ```json
    {
@@ -16,7 +18,7 @@
    }
    ```
 
-4. Rooms for state before fetching from API
+5. Rooms for state before fetching from API
 
    ```js
    const rooms = [
@@ -58,5 +60,5 @@
      ]
    ```
 
-5. My clubhouse completed version - https://github.com/gatukgl/my-clubhouse-react
+6. My clubhouse completed version - https://github.com/gatukgl/my-clubhouse-react
 
