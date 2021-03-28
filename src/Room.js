@@ -1,4 +1,4 @@
-export const Room = (props) => {
+export const Room = props => {
   const detail = props.detail
   return (
     <div

@@ -1,6 +1,6 @@
 import { Link, withRouter } from 'react-router-dom'
 
-export const RoomCreationButton = withRouter((props) => {
+export const RoomCreationButton = withRouter(props => {
   const onButtonClicked = () => {
     props.history.replace('/create-room')
     props.history.goBack()

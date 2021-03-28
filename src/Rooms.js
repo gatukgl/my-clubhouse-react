@@ -7,7 +7,7 @@ export class Rooms extends React.Component {
   state = { rooms: [] }
 
   componentDidMount() {
-    getRooms().then((rooms) => {
+    getRooms().then(rooms => {
       this.setState({ rooms: rooms })
     })
   }
@@ -15,7 +15,7 @@ export class Rooms extends React.Component {
   render() {
     return (
       <>
-        {this.state.rooms.map((roomDetail) => {
+        {this.state.rooms.map(roomDetail => {
           return <Room key={roomDetail.id} detail={roomDetail} />
         })}
       </>
