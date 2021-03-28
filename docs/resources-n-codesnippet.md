@@ -1,8 +1,8 @@
 # Resources and Code Snippet
 
-1. Clubhouse HTML: https://github.com/gatukgl/hello-clubhouse-html
+1. Slide: https://docs.google.com/presentation/d/1Ajb9n-ttpUwEhaZXPCgsGOFZZl7FWNi9JQ5jsPrumFg/edit#slide=id.p
 
-2. React installation guide:  
+2. Clubhouse HTML: https://github.com/gatukgl/hello-clubhouse-html
 
 3. .prettierrc.json
 
@@ -16,9 +16,7 @@
    }
    ```
 
-4. Dd
-
-5. Rooms for state before fetching from API
+4. Rooms for state before fetching from API
 
    ```js
    const rooms = [
@@ -60,7 +58,7 @@
      ]
    ```
 
-6. My clubhouse completed version - 
+5. My clubhouse completed version - 
 
-7. 
+6. 
 
