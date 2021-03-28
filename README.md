@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Reference: https://github.com/gatukgl/my-clubhouse-react/tree/master/docs
 
+- 🔮 [**Resources and code snippet**](https://github.com/gatukgl/my-clubhouse-react/blob/master/docs/resources-n-codesnippet.md)
 - [Installation guide for React development](https://github.com/gatukgl/my-clubhouse-react/blob/master/docs/setting-up-react-app.md)
 - [Converting HTML to JSX guide line](https://github.com/gatukgl/my-clubhouse-react/blob/master/docs/react-components.md)
-- [Resources and code snippet](https://github.com/gatukgl/my-clubhouse-react/blob/master/docs/resources-n-codesnippet.md)
 
