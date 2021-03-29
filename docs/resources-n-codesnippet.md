@@ -4,7 +4,7 @@
 
 2. ES6++ usage examples: https://gist.github.com/gatukgl/b07367c40c9df69e8389d405f3a39550
 
-3. Setting up React app: https://github.com/gatukgl/my-clubhouse-react/blob/master/docs/setting-up-react-app.md 
+3. Setting up React app: https://github.com/gatukgl/my-clubhouse-react/blob/master/docs/setting-up-react-app.md
 
 4. Clubhouse HTML: https://github.com/gatukgl/hello-clubhouse-html
 
@@ -44,7 +44,7 @@
          ],
          listenerCount: 20,
        },
-   
+
        {
          id: 2,
          topic: 'Animal On A Budget: 6 Tips From The Great Depression',
@@ -74,4 +74,14 @@ https://www.w3schools.com/howto/img_avatar2.png
 https://www.w3schools.com/w3images/avatar2.png
 https://www.w3schools.com/w3images/avatar6.png
 https://www.w3schools.com/w3images/avatar5.png
+```
+10. prettier configs in VSCode
+```json
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 ```
