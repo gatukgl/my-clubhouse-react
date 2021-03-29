@@ -112,6 +112,7 @@ mapRoomsFromApi(data) {
   }
 ```
 12. API endpoint
+
 **Get All Rooms**
 ENDPOINT: http://<ip>/api/rooms/
 METHOD: **GET**
@@ -120,7 +121,8 @@ METHOD: **GET**
 ENDPOINT: http://<ip>/api/rooms/
 METHOD: **POST**
 REQUEST BODY:
-```
+   
+```json
 {
     "topic": "",
     "moderator": [<username>, <username>]
