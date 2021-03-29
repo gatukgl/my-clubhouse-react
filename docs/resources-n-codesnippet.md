@@ -111,3 +111,18 @@ mapRoomsFromApi(data) {
     return rooms
   }
 ```
+12. API endpoint
+**Get All Rooms**
+ENDPOINT: http://128.199.212.188/api/rooms/
+METHOD: **GET**
+
+**Create Room**
+ENDPOINT: http://128.199.212.188/api/rooms/
+METHOD: **POST**
+REQUEST BODY:
+```
+{
+    "topic": "",
+    "moderator": [<username>, <username>]
+}
+```
