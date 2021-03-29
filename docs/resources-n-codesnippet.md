@@ -114,11 +114,11 @@ mapRoomsFromApi(data) {
 12. API endpoint
 
 **Get All Rooms**
-ENDPOINT: http://<ip>/api/rooms/
+ENDPOINT: http://xxxxxxxxxx/api/rooms/
 METHOD: **GET**
 
 **Create Room**
-ENDPOINT: http://<ip>/api/rooms/
+ENDPOINT: http://xxxxxxxxxx/api/rooms/
 METHOD: **POST**
 REQUEST BODY:
    
