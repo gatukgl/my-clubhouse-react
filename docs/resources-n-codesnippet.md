@@ -85,3 +85,48 @@ https://www.w3schools.com/w3images/avatar5.png
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 ```
+11. function `mapRoomsFromApi()`
+```js
+mapRoomsFromApi(data) {
+    const rooms = data.map((item) => {
+      return {
+        id: item.id,
+        topic: item.topic,
+        listenerCount: item.room_listener.length,
+        moderators: [
+          {
+            username: item.room_moderator[0].user.username,
+            name: item.room_moderator[0].user.name,
+            imageUrl: item.room_moderator[0].user.profile_picture,
+          },
+          {
+            username: item.room_moderator[1].user.username,
+            name: item.room_moderator[1].user.name,
+            imageUrl: item.room_moderator[1].user.profile_picture,
+          },
+        ],
+      }
+    })
+
+    return rooms
+  }
+```
+12. API endpoint
+
+**Get All Rooms**
+
+ENDPOINT: http://xxxxxxxxxx/api/rooms/
+METHOD: **GET**
+
+**Create Room**
+
+ENDPOINT: http://xxxxxxxxxx/api/rooms/
+METHOD: **POST**
+REQUEST BODY:
+   
+```json
+{
+    "topic": "",
+    "moderator": [<username>, <username>]
+}
+```
