@@ -1,24 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { getRooms } from './apis'
 import { Room } from './Room'
 
-export class Rooms extends React.Component {
-  state = { rooms: [] }
+export const Rooms = () => {
+  const [rooms, setRooms] = useState([])
 
-  componentDidMount() {
+  useEffect(() => {
     getRooms().then(rooms => {
-      this.setState({ rooms: rooms })
+      setRooms(rooms)
     })
-  }
+  }, [])
 
-  render() {
-    return (
-      <>
-        {this.state.rooms.map(roomDetail => {
-          return <Room key={roomDetail.id} detail={roomDetail} />
-        })}
-      </>
-    )
-  }
+  return (
+    <>
+      {rooms.map(roomDetail => {
+        return <Room key={roomDetail.id} detail={roomDetail} />
+      })}
+    </>
+  )
 }

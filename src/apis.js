@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 const axiosInstance = axios.create({
-  baseURL: 'http://192.168.1.108:80/api/',
+  baseURL: 'http://128.199.212.188/api/',
 })
 
-const mapRoomsFromApi = (data) => {
-  const rooms = data.map((item) => {
+const mapRoomsFromApi = data => {
+  const rooms = data.map(item => {
     return {
       id: item.id,
       topic: item.topic,
@@ -31,10 +31,10 @@ export const getRooms = () => {
   const url = 'rooms/'
   return axiosInstance
     .get(url)
-    .then((response) => {
+    .then(response => {
       const data = response.data
       const rooms = mapRoomsFromApi(data)
       return rooms
     })
-    .catch((error) => console.error('[Get rooms]', error))
+    .catch(error => console.error('[Get rooms]', error))
 }

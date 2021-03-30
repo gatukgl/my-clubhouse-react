@@ -1,19 +1,26 @@
+import axios from 'axios'
 import React, { useState } from 'react'
+import { withRouter } from 'react-router-dom'
 
-export const RoomCreator = () => {
-  //   state = {
-  //     topicName: '',
-  //     moderator1: '',
-  //     moderator2: '',
-  //   }
-
-  //   onTextChanged = (event) => {
-  //     this.setState({ [event.target.name]: event.target.value })
-  //   }
-
+export const RoomCreator = withRouter(props => {
   const [topicName, setTopicName] = useState('')
   const [moderator1, setModerator1] = useState('')
   const [moderator2, setModerator2] = useState('')
+
+  const onCreateTopicClicked = () => {
+    const roomDetail = {
+      topic: topicName,
+      moderator: [moderator1, moderator2],
+    }
+    axios
+      .post('http://128.199.212.188/api/rooms/', roomDetail)
+      .then(response => {
+        console.log(response)
+        if (response.status === 201) {
+          props.history.push('/')
+        }
+      })
+  }
 
   return (
     <>
@@ -27,7 +34,7 @@ export const RoomCreator = () => {
             type="text"
             placeholder="🗒 e.g. Raising wolves - good idea?"
             name="topicName"
-            onChange={(event) => setTopicName(event.target.value)}
+            onChange={event => setTopicName(event.target.value)}
             value={topicName}
           />
         </div>
@@ -52,7 +59,7 @@ export const RoomCreator = () => {
                 aria-label="Example text with button addon"
                 aria-describedby="button-addon1"
                 name="moderator1"
-                onChange={(event) => setModerator1(event.target.value)}
+                onChange={event => setModerator1(event.target.value)}
                 value={moderator1}
               />
             </div>
@@ -73,7 +80,7 @@ export const RoomCreator = () => {
                 aia-label="Example text with button addon"
                 aria-describedby="button-addon1"
                 name="moderator2"
-                onChange={(event) => setModerator2(event.target.value)}
+                onChange={event => setModerator2(event.target.value)}
                 value={moderator2}
               />
             </div>
@@ -82,8 +89,8 @@ export const RoomCreator = () => {
 
         {/*  Start a room  */}
         <div className="my-4">
-          <a
-            href="#"
+          <button
+            onClick={onCreateTopicClicked}
             className="btn btn-primary btn-md active d-block mx-auto"
             role="button"
             aria-pressed="true"
@@ -97,9 +104,9 @@ export const RoomCreator = () => {
           >
             <i className="fas fa-check mr-2"></i>
             Set topic
-          </a>
+          </button>
         </div>
       </div>
     </>
   )
-}
+})
